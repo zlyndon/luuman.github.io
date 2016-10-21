@@ -4,7 +4,7 @@
   <subtitle><![CDATA[因为有了危机感，所以会义无反顾。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://luuman.github.io/"/>
-  <updated>2016-10-21T23:30:30.140Z</updated>
+  <updated>2016-10-21T23:36:04.523Z</updated>
   <id>http://luuman.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://luuman.github.io/2016/12/25/FrontFrame/ReactNative/"/>
     <id>http://luuman.github.io/2016/12/25/FrontFrame/ReactNative/</id>
     <published>2016-12-25T10:29:00.000Z</published>
-    <updated>2016-10-21T23:30:30.140Z</updated>
+    <updated>2016-10-21T23:36:04.523Z</updated>
     <content type="html"><![CDATA[<p>　　<strong>自用笔记：</strong>本文属于自用笔记，不做详解，仅供参考。在此记录自己已理解并开始遵循的前端代码规范。What How Why<br><a id="more"></a></p>
 <h2 id="React_Native_u521D_u63A2"><a href="#React_Native_u521D_u63A2" class="headerlink" title="React Native初探"></a>React Native初探</h2><!-- learn once,write everywhere! -->
 <p>ReactNative是Facebook在2015年React开发者大会上公开的应用开发框架，一个可以用React开发原生应用的框架。</p>
@@ -157,7 +157,7 @@
 <blockquote>
 <p>通过菜单“Reload js”实现刷新，通过“Dev Settings”设置<br>“Debug server host &amp; port for device”计算机网络IP地址。</p>
 </blockquote>
-<h4 id="android__u8FD0_u884Cpackager_u76D1_u63A7_u5668"><a href="#android__u8FD0_u884Cpackager_u76D1_u63A7_u5668" class="headerlink" title="android 运行packager监控器"></a>android 运行packager监控器</h4><p>可以用浏览器访问<a href="http://localhost:8081/index.android.bundle?platform=android" title="link" target="_blank" rel="external">android</a>看看是否可以看到打包后的脚本（看到很长的js代码就对了）。第一次访问通常需要十几秒，并且在packager的命令行可以看到形如[====]的进度条。</p>
+<h4 id="android__u8FD0_u884Cpackager_u76D1_u63A7_u5668"><a href="#android__u8FD0_u884Cpackager_u76D1_u63A7_u5668" class="headerlink" title="android 运行packager监控器"></a>android 运行packager监控器</h4><p>react-native start<br>可以用浏览器访问<a href="http://localhost:8081/index.android.bundle?platform=android" title="link" target="_blank" rel="external">android</a>看看是否可以看到打包后的脚本（看到很长的js代码就对了）。第一次访问通常需要十几秒，并且在packager的命令行可以看到形如[====]的进度条。</p>
 <p>如果你遇到了ERROR Watcher took too long to load的报错，请尝试修改node_modules/react-native/packager/react-packager/src/FileWatcher/index.js，将其中的MAX_WAIT_TIME 从25000改为更大的值（单位是毫秒）</p>
 <h3 id="u76F8_u5173_u8D44_u6599_uFF1A"><a href="#u76F8_u5173_u8D44_u6599_uFF1A" class="headerlink" title="相关资料："></a>相关资料：</h3><p><a href="http://reactnative.cn/docs/0.31/getting-started.html" target="_blank" rel="external">搭建开发环境</a><br><a href="http://reactnative.cn/post/10" target="_blank" rel="external">在Windows下搭建React Native Android开发环境</a><br><a href="http://bbs.reactnative.cn/topic/10/%E5%9C%A8windows%E4%B8%8B%E6%90%AD%E5%BB%BAreact-native-android%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83" target="_blank" rel="external">在Windows下搭建React Native Android开发环境</a><br><a href="http://reactnative.cn/docs/0.31/running-on-device-android.html#content" target="_blank" rel="external">在设备上运行</a></p>
 <h2 id="u9879_u76EE_u7ED3_u6784"><a href="#u9879_u76EE_u7ED3_u6784" class="headerlink" title="项目结构"></a>项目结构</h2><figure class="highlight 1c" data-lang=" 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">ReactNative     (项目名称)</span><br><span class="line"><span class="string">|–node_modules                  node模块</span></span><br><span class="line">    <span class="string">|–react-native              ReactNative引用工程文件</span></span><br><span class="line"><span class="string">|–__tests__                     Test页面</span></span><br><span class="line">    <span class="string">|–index.android.js          android工程备份</span></span><br><span class="line">    <span class="string">|–index.ios.js              ios工程备份</span></span><br><span class="line"><span class="string">|–index.android.js              android工程（开发文件）</span></span><br><span class="line"><span class="string">|–index.ios.js                  ios工程（开发文件）</span></span><br><span class="line"><span class="string">|–android              android项目</span></span><br><span class="line">    <span class="string">|–*.xcodeproj               Xcode启动文件</span></span><br><span class="line"><span class="string">|–ios                  ios项目</span></span><br><span class="line">    <span class="string">|–*.wxml              		页面结构</span></span><br><span class="line">    <span class="string">|–*.wxss              		页面样式表</span></span><br><span class="line">    <span class="string">|–*.json              		页面配置</span></span><br><span class="line">    <span class="string">|–*.js                		页面逻辑</span></span><br><span class="line"><span class="string">|–package.json         工程信息数据</span></span><br><span class="line"><span class="string">|–app.wxss      小程序公共样式表</span></span><br></pre></td></tr></table></figure>
